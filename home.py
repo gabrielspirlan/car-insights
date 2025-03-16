@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
+import plotly.express as pt
 
 st.set_page_config(layout="wide")
 df_cars = pd.read_csv('dataset/Automobile.csv')
@@ -16,7 +16,7 @@ st.title("Car Insights (Home)")
 cars_filtered
 
 ### CHARTs
-cars_by_year = px.pie(
+cars_by_year = pt.pie(
     cars_filtered, 
     names="model_year",
     title="Number os models per year"
@@ -24,8 +24,8 @@ cars_by_year = px.pie(
 
 
 col1, col2 = st.columns(2);
-cars_by_cilinders = px.bar(cars_filtered['cylinders'].value_counts(), title="Number of models per Cylinders")
-cars_by_origin = px.pie(cars_filtered, names="origin", title="Cars by origin")
+cars_by_cilinders = pt.bar(cars_filtered['cylinders'].value_counts(), title="Number of models per Cylinders")
+cars_by_origin = pt.pie(cars_filtered, names="origin", title="Cars by origin")
 
 col1.plotly_chart(cars_by_year)
 col2.plotly_chart(cars_by_cilinders)
