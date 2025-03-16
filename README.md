@@ -1,6 +1,6 @@
 # Car Insights
 
-(Clique aqui para acessar o projeto!)[https://car-insights.streamlit.app/]
+[Clique aqui para acessar o projeto!](https://car-insights.streamlit.app/)
 
 Projeto desenvolvido para consolidação de conhecimentos de análise de dados de utilizando um dataset CSV.
 
